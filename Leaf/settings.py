@@ -76,8 +76,11 @@ WSGI_APPLICATION = 'Leaf.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'Leaf',
+        'USER': 'postgres',
+        'PASSWORD':'mahi70220',
+        'HOST': 'localhost'
     }
 }
 
@@ -122,8 +125,9 @@ STATIC_URL = '/static/'
 MEDIA_URL = '/pictures/'
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'media'),
-    'M:\Python\Leaf\details\static',
+    os.path.join(BASE_DIR, 'static'),
+    
  ]
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/pictures')
+STATIC_ROOT = os.path.join(BASE_DIR, 'assests')
